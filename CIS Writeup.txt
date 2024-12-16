@@ -1,0 +1,76 @@
+17:26:32 From William Hsu to Everyone:
+	Presentation 12
+	CIS 531 Introduction to Programming Techniques for Data Science and Analytics & CIS 731 Programming Techniques for Data Science and Analytics
+	Team 19 - Dedric McCoy
+	Classification of Customer Segments and Attrition Prediction for Marketing Efforts
+	Sun 15 Dec 2024
+17:49:00 From William Hsu to Everyone:
+	Standard questions:
+	
+	1. MOST CHALLENGING ASPECT. What aspect of data analytics and data science did you find most challenging in completing your term project?
+17:49:02 From William Hsu to Everyone:
+	Ensuring the insights of the clustering model were able to provide understanding of how to improve business strategies
+17:49:35 From William Hsu to Everyone:
+	2. ASPECT OF MOST LEARNING. What aspect of data analytics any data science did you learn the most about in completing your term project?
+17:49:44 From William Hsu to Everyone:
+	Creating visualizations that were meaningful to provide detailed insight
+17:54:22 From William Hsu to Everyone:
+	3. FUTURE WORK. What would be your top priority for future work if you were to continue this project as an independent study or research project?
+17:54:35 From William Hsu to Everyone:
+	Incorporate more data sources to do a deeper analysis, i.e.: regional demographic info, spending categories
+18:05:35 From William Hsu to Everyone:
+	Discussion:
+	
+	   - (Bill) Following up on challenges: Can you think of ways to use historical data with labels?
+	     (Dedric) Would need to look into data agreements with the credit card company (unless employed by them as a data analyst or consultant/contractor)
+	     (Bill) Say these were self-selected customer data - interest level indicated in surveys, opt-in, etc. How would you use this data to remap customer segments for follow-up action such as remapping the clusters found using unsupervised learning alone?
+	     (Dedric) Look at interest features for each card offer; tailor the survey itself to clusters found (a priori); look at correlation between proposed hypothetical offer on a survey and cluster membership indicators
+18:05:45 From William Hsu to Everyone:
+	- (Bill) Following up on the things you learned that were new: What type of visualization did you learn that was new to you, besides bar graphs from scratch?
+	     (Dedric) Correlation matrices (as a heat map)
+	     (Bill) What is an example of an actionable finding from a correlation matrix
+	     (Dedric) Drill down into a highly-correlated pair of variables to understand a desired prediction of interest (e.g., card type) broken down by values of the features visualized
+18:05:56 From William Hsu to Everyone:
+	- (Bill) What would be a way to build a predictive model of customer segment (or churn) if you had transactional data?
+	     (Dedric) Build a time series model to predict general spending category (e.g., bin for monthly or annual spend) based on past habits by category/sector (multidimensional)
+	     (Bill) What about regional demographic info?
+	     (Dedric) Build a contextual predictor based on business type of recent transactions (e.g., market basket analysis), regionalized (e.g., southern USA, rural or specifically outdoor categories might be localized to types of purchases by department)
+18:06:21 From William Hsu to Everyone:
+	(Bill) What would that let you do?  e.g., you have options such as credit discounts, other offers - what does the data tell you through these model outputs?
+	     (Dedric) Make the customer feel more connected to the company by tailoring offers by segment AND other category
+	     (Bill) Credit cards sometimes have "3%" (premium) cashback categories that the customer can choose and "1%" (generic) for everything else. Say you built the model you describe. How would this improve on personalization?
+	     (Dedric) Accumulation of rewards that leverage brand identity and loyalty (e.g., extension of "store" cards to cards associated with a brand and its products, e.g., Apple - retailer or manufacturer)
+18:11:26 From William Hsu to Everyone:
+	- (Bill) What was the highest number of rows you dealt with in your project?
+	     (Dedric) 10127 rows (20 columns) - Introduction
+	     (Bill) Suggest repeating that in your first Methodology slide
+18:26:53 From William Hsu to Everyone:
+	Notes:
+	      - note suggested change to title: Customer Segmentation and Attrition Prediction for Marketing via Data Mining and Information Visualization (specify CLUSTERING and SUPERVISED LEARNING FOR CLASSIFICATION in your slides)
+	      - project category: classification/prediction
+	      - project topic: structure customer data
+	      - project task(s): unsupervised learning, visualization, supervised learning (LR)
+	      - presentation pace was good (stayed within ~15 minutes even with standard questions)
+	      - numbered your slides
+18:27:13 From William Hsu to Everyone:
+	      - example of a "build on a starter project and experiment with methods" for a standard task (credit card customer segmentation data from Kaggle) 
+	      - well-presented talk with well-organized slides - generally appropriate level of detail on methods
+	      - text is a little dense on some slides - would suggest breaking those up to no more than 9 lines per slide (~20-24 point font size), 1 indent level past top level
+	      - organized talk in same order as proposal and report (needs Background and Related Work, Future Work) AND pipeline - excellent
+	      - you can also copy and paste text results from notebooks or terminal (command line interpreter) / console window
+	      - formatting: avoid changing the aspect ratio of screenshotted figures and tables (slight horizontal compression)
+18:27:53 From William Hsu to Everyone:
+	- intro: good problem statement; discuss PROVENANCE of data (original source: producer, conditions and parameters for data synthetic), data dimensions - excellent
+	      - intro: give overview/list of methods used (following the inline documentation in Kaggle notebooks) <--
+	      - background and related work: cite references inline, made uniform: APA, ACM, AAAI, or IEEE format
+	      - background and related work: discuss details of model choices - dealing with class imbalance, feature importance; see discussion notes below <---
+	      - background and related work: list models you surveyed (not just the ones you trained and ran), especially in your report
+18:28:11 From William Hsu to Everyone:
+	      - methodology: discuss any use of exploratory data analysis, interactive data analysis
+	      - methodology/results: experiment design; hypothesis testing results required - p-value for two treatments (e.g., with one set of optional features)
+	      - methodology/results: for clustering: designate the BASELINE to be your clustering OR classification target with the MINIMAL set of features (e.g., just your original 5, without some optional ones) and the ALTERNATIVE to be the one WITH the additional features; a suggested null hypothesis H_0 would then be that the baseline cohesion or diameter (averaged over your VALIDATION/TEST SET, normalized if needed) is greater than or equal to that of the alternative; for classification, compare an evaluation metric you already computed (e.g., F1) for LR to (say) RF <---
+	      - methodology/results: either way, use a paired t-test over the 5 cross-validation folds <---
+18:28:19 From William Hsu to Everyone:
+	- results: reported confusion matrix, ROC curves for LR - good
+	      - results/conclusions: give interpretation of results, performance metrics
+	      - future work: see discussion
